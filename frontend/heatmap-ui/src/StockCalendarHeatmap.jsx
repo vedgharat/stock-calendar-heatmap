@@ -72,7 +72,7 @@ export default function StockCalendarHeatmap() {
       return;
     }
     // Mocking fetch or using your endpoint
-    fetch(`http://127.0.0.1:8000/api/prices/${symbol}?year=${year}`)
+    fetch(`https://stock-calendar-heatmap.onrender.com/api/prices/${symbol}?year=${year}`)
       .then((r) => r.json())
       .then((arr) => setData(Array.isArray(arr) ? arr : []))
       .catch(() => setData([]));
